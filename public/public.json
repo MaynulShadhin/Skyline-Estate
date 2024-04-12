@@ -1,0 +1,75 @@
+[
+    {
+      "estate_title": "Prime Retail Space",
+      "id": 1,
+      "segment_name": "Retail",
+      "description": "High-traffic retail space located in a bustling shopping district.",
+      "price": "$15,000/month",
+      "status": "rent",
+      "area": "2500 sq ft",
+      "location": "Times Square, New York City",
+      "image": "https://i.ibb.co/y40kVnp/Prime-Retail-Space.jpg",
+      "facilities": ["Storefront display", "Street-level access", "Ample parking"]
+    },
+    {
+      "estate_title": "Corporate Headquarters",
+      "id": 2,
+      "segment_name": "Office",
+      "description": "State-of-the-art office building designed for corporate headquarters, with modern amenities and customizable floor plans.",
+      "price": "$25,000/month",
+      "status": "rent",
+      "area": "15000 sq ft",
+      "location": "Downtown Chicago, Illinois",
+      "image": "https://i.ibb.co/sQ6Tv60/Corporate-Headquarters.jpg",
+      "facilities": ["Executive boardrooms", "On-site cafeteria", "Fitness center"]
+    },
+    {
+      "estate_title": "Industrial Warehouse",
+      "id": 3,
+      "segment_name": "Industrial",
+      "description": "Spacious industrial warehouse suitable for logistics or manufacturing operations, with easy access to transportation routes.",
+      "price": "$2,000,000",
+      "status": "sale",
+      "area": "50000 sq ft",
+      "location": "Los Angeles, California",
+      "image": "https://i.ibb.co/XJ7P4qW/Industrial-Warehouse.jpg",
+      "facilities": ["Loading docks", "High ceilings for storage", "Heavy-duty power supply"]
+    },
+    {
+      "estate_title": "Tech Startup Incubator",
+      "id": 4,
+      "segment_name": "Office",
+      "description": "Innovative office space designed to foster collaboration and creativity, ideal for tech startups and small businesses.",
+      "price": "$5,000/month",
+      "status": "rent",
+      "area": "2000 sq ft",
+      "location": "Silicon Valley, California",
+      "image": "https://i.ibb.co/G7D88rC/Tech-Startup-Incubator.jpg",
+      "facilities": ["Co-working spaces", "Networking events", "Mentorship programs"]
+    },
+    {
+      "estate_title": "Fine Dining Restaurant",
+      "id": 5,
+      "segment_name": "Restaurant",
+      "description": "Upscale restaurant with a sophisticated ambiance and gourmet cuisine, perfect for special occasions and fine dining experiences.",
+      "price": "$1,000,000",
+      "status": "sale",
+      "area": "5000 sq ft",
+      "location": "Manhattan, New York City",
+      "image": "https://i.ibb.co/GMvGYt6/Fine-Dining-Restaurant.jpg",
+      "facilities": ["Wine cellar", "Outdoor patio", "Private dining rooms"]
+    },
+    {
+      "estate_title": "Multipurpose Event Venue",
+      "id": 6,
+      "segment_name": "Entertainment",
+      "description": "Versatile event space suitable for weddings, corporate events, and live performances, equipped with state-of-the-art audiovisual technology.",
+      "price": "$10,000/day",
+      "status": "rent",
+      "area": "10000 sq ft",
+      "location": "Los Angeles, California",
+      "image": "https://i.ibb.co/j6PDyJg/Multipurpose-Event-Venue.jpg",
+      "facilities": ["Stage", "Bar area", "VIP lounges"]
+    }
+  ]
+  
