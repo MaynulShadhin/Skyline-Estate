@@ -14,8 +14,8 @@ const Banner = () => {
                 <SwiperSlide><img className='w-screen md:h-[800px] object-cover' src={slider2} alt="" /></SwiperSlide>
                 <SwiperSlide><img className='w-screen md:h-[800px] object-cover' src={slider3} alt="" /></SwiperSlide>
             </Swiper>
-            <div className='absolute z-10 top-52 left-10'>
-                <h2 className='text-5xl font-bold mb-4'>Best Seller In City</h2>
+            <div className='absolute z-10 md:top-52 md:left-10 hidden md:block'>
+                <h2 className='text-5xl font-bold mb-4'>Best <span className='font-bold text-lime-500'>Seller</span> In City</h2>
                 <p className='text-lg'>Innovative platform showcasing prime properties, tailored solutions, seamless transactions, <br /> and expert insights for discerning investors</p>
             </div>
         </div>

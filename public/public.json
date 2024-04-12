@@ -2,7 +2,7 @@
     {
       "estate_title": "Prime Retail Space",
       "id": 1,
-      "segment_name": "Retail",
+      "segment_name": "Retail Spaces",
       "description": "High-traffic retail space located in a bustling shopping district.",
       "price": "$15,000/month",
       "status": "rent",
@@ -14,7 +14,7 @@
     {
       "estate_title": "Corporate Headquarters",
       "id": 2,
-      "segment_name": "Office",
+      "segment_name": "Office Building",
       "description": "State-of-the-art office building designed for corporate headquarters, with modern amenities and customizable floor plans.",
       "price": "$25,000/month",
       "status": "rent",
@@ -24,9 +24,9 @@
       "facilities": ["Executive boardrooms", "On-site cafeteria", "Fitness center"]
     },
     {
-      "estate_title": "Industrial Warehouse",
+      "estate_title": "Wide Industrial Warehouse",
       "id": 3,
-      "segment_name": "Industrial",
+      "segment_name": "WareHouse",
       "description": "Spacious industrial warehouse suitable for logistics or manufacturing operations, with easy access to transportation routes.",
       "price": "$2,000,000",
       "status": "sale",
@@ -38,7 +38,7 @@
     {
       "estate_title": "Tech Startup Incubator",
       "id": 4,
-      "segment_name": "Office",
+      "segment_name": "Industrial facilities",
       "description": "Innovative office space designed to foster collaboration and creativity, ideal for tech startups and small businesses.",
       "price": "$5,000/month",
       "status": "rent",
@@ -62,7 +62,7 @@
     {
       "estate_title": "Multipurpose Event Venue",
       "id": 6,
-      "segment_name": "Entertainment",
+      "segment_name": "Entertainment venues",
       "description": "Versatile event space suitable for weddings, corporate events, and live performances, equipped with state-of-the-art audiovisual technology.",
       "price": "$10,000/day",
       "status": "rent",
