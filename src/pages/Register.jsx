@@ -1,15 +1,28 @@
 import { Link } from "react-router-dom";
 
-const Login = () => {
+const Register = () => {
     return (
-        <div className="hero min-h-screen bg-base-200">
-            <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Login now!</h1>
-                    <p className="py-6 text-gray-600">Streamlined login for efficient access. Secure authentication ensures data safety. User-friendly interface enhances navigation. Instant access to resources.</p>
+        <div>
+            <div className="hero min-h-screen bg-base-200">
+            <div className="hero-content flex-col">
+                <div className="text-center">
+                    <h1 className="text-5xl font-bold">Register now!</h1>
+                    <p className="py-6 text-gray-600">Streamlined login for efficient access. Secure authentication ensures data safety. User-friendly <br /> interface enhances navigation. Instant access to resources.</p>
                 </div>
                 <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <form className="card-body">
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Your Name</span>
+                            </label>
+                            <input type="text" placeholder="Your Name" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Photo url</span>
+                            </label>
+                            <input type="text" placeholder="Photo url" className="input input-bordered" required />
+                        </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
@@ -30,13 +43,14 @@ const Login = () => {
                         </div>
                     </form>
                     <div className="flex justify-around mb-4">
-                        <span className="text-sm">Do not Have An Account?</span>
-                        <Link to='/register' className="text-lime-500 underline">Register</Link>
+                        <span className="text-sm">Already Have An Account?</span>
+                        <Link to='/login' className="text-lime-500 underline">Login</Link>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
     );
 };
 
-export default Login;
+export default Register;
