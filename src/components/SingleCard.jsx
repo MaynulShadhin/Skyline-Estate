@@ -1,11 +1,22 @@
 import PropTypes from 'prop-types';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { BiSolidArea } from "react-icons/bi";
 import { MdOutlineBedroomParent } from "react-icons/md";
 import { RiCurrencyFill } from "react-icons/ri";
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 const SingleCard = ({ card }) => {
-    const { image, segment_name, estate_title, location, area,price, status, facilities } = card
+
+    useEffect(() => {
+        AOS.init({ duration: "1000" });
+    }, [])
+
+    const { id,image, segment_name, estate_title, location, area, price, status, facilities } = card
+
     return (
-        <div className='mx-4 lg:mx-0 p-4 bg-white rounded-md'>
+        <div data-aos="zoom-in"
+            className='mx-4 lg:mx-0 p-4 bg-white rounded-md'>
             <img className='w-full md:h-[250px] lg:h-[320px] rounded-sm' src={image} alt="" />
             <p className='font-medium text-lime-500 my-4'>{segment_name}</p>
             <p className='text-2xl font-semibold mb-2'>{estate_title}</p>
@@ -27,10 +38,10 @@ const SingleCard = ({ card }) => {
             <div className='my-4 text-gray-500'>
                 <p className='font-semibold'>Facilities:</p>
                 {
-                    facilities.map((facility,idx)=><li key={idx} className='ml-2 list-disc'>{facility}</li>)
+                    facilities.map((facility, idx) => <li key={idx} className='ml-2 list-disc'>{facility}</li>)
                 }
             </div>
-            <button className='btn bg-lime-500 text-white hover:text-black'>View Property</button>
+            <Link to ={`/cardDetail/${id}`}><button className='btn bg-lime-500 text-white hover:text-black'>View Property</button></Link>
         </div>
     );
 };

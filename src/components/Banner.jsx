@@ -7,8 +7,7 @@ import slider2 from '../assets/slider2.jpg';
 import slider3 from '../assets/slider3.jpg'; 
 const Banner = () => {
     return (
-        <div className='relative'>
-
+        <div>
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
                 <SwiperSlide><img className='w-screen md:h-[800px] object-cover' src={slider1} alt="" /></SwiperSlide>
                 <SwiperSlide><img className='w-screen md:h-[800px] object-cover' src={slider2} alt="" /></SwiperSlide>
