@@ -8,6 +8,7 @@ import {
 import Root from './layout/Root';
 import Home from './pages/Home';
 import CardDetail from './pages/CardDetail';
+import Login from './pages/Login';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
         path:"/cardDetail/:id",
         element: <CardDetail></CardDetail>,
         loader: ()=>fetch('../public.json')
+      },
+      {
+        path:"/login",
+        element: <Login></Login>
       }
     ]
   },

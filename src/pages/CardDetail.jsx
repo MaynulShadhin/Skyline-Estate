@@ -21,7 +21,7 @@ const CardDetail = () => {
                 <p className="text-2xl font-semibold bg-gray-500 text-white px-6 py-4">Description</p>
                 <p className="px-8 py-6 text-gray-600">{description}</p>
             </div>
-            <div>
+            <div className="bg-white pb-6">
                 <p className="text-2xl font-semibold bg-gray-500 text-white px-6 py-4 mb-10">Property Details</p>
                 <div className="ml-10">
                     <div className='flex  gap-20'>
