@@ -7,7 +7,7 @@ const Register = () => {
             <div className="hero-content flex-col">
                 <div className="text-center">
                     <h1 className="text-5xl font-bold">Register now!</h1>
-                    <p className="py-6 text-gray-600">Streamlined login for efficient access. Secure authentication ensures data safety. User-friendly <br /> interface enhances navigation. Instant access to resources.</p>
+                    <p className="py-6 text-gray-600">Quick registration process for new users. Robust security measures safeguard information. <br /> Seamless integration with user profiles. Simplified steps for access.</p>
                 </div>
                 <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <form className="card-body">
@@ -15,13 +15,13 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Your Name</span>
                             </label>
-                            <input type="text" placeholder="Your Name" className="input input-bordered" required />
+                            <input type="text" placeholder="Your Name" className="input input-bordered"/>
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Photo url</span>
                             </label>
-                            <input type="text" placeholder="Photo url" className="input input-bordered" required />
+                            <input type="text" placeholder="Photo url" className="input input-bordered"/>
                         </div>
                         <div className="form-control">
                             <label className="label">
