@@ -5,7 +5,7 @@ import SingleCard from "./SingleCard";
 const Cards = () => {
     const cards = useLoaderData()
     return (
-        <div className="container mx-4 md:mx-auto my-20">
+        <div className="lg:container mx-4 md:mx-auto my-20">
             <div className="mb-8 mx-2 lg:mx-0">
                 <span className="text-3xl text-green-500"><RiHomeOfficeLine /></span>
                 <h2 className="text-4xl font-semibold uppercase mt-4">Recent Properties</h2>
