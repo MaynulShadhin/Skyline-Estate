@@ -7,7 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
-    const { signInUser, googleSignIn,githubSignIn } = useContext(AuthContext)
+    const { signInUser, googleSignIn, githubSignIn } = useContext(AuthContext)
     const [error, setError] = useState('')
     const [showPass, setShowPass] = useState(false)
 
@@ -27,6 +27,28 @@ const Login = () => {
             .catch(error => {
                 setError("Please check your email and password")
                 console.error(error.message)
+            })
+    }
+
+    //google sign in
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then(() => {
+                toast.success("Google Login Successful")
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
+    }
+
+    //github sign in
+    const handleGithubSignIn = () => {
+        githubSignIn()
+            .then(() => {
+                toast.success("GitHub Login Successful")
+            })
+            .catch(error => {
+                console.log(error.message)
             })
     }
 
@@ -78,12 +100,12 @@ const Login = () => {
                     <p className="text-center text-gray-500 mb-4">-----------Continue with----------</p>
                     <div className="flex justify-around mb-4">
                         {/* google button */}
-                        <button onClick={() => googleSignIn()} className="bg-slate-100 rounded-xl px-8 py-2">
+                        <button onClick={handleGoogleSignIn} className="bg-slate-100 rounded-xl px-8 py-2">
                             <FaGoogle className="text-2xl"></FaGoogle>
                         </button>
 
                         {/* github button */}
-                        <button onClick={()=>githubSignIn()} className="bg-slate-100 rounded-xl px-8 py-2">
+                        <button onClick={handleGithubSignIn} className="bg-slate-100 rounded-xl px-8 py-2">
                             <FaGithub className="text-2xl"></FaGithub>
                         </button>
                     </div>
