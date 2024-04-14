@@ -7,7 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
-    const { signInUser, googleSignIn } = useContext(AuthContext)
+    const { signInUser, googleSignIn,githubSignIn } = useContext(AuthContext)
     const [error, setError] = useState('')
     const [showPass, setShowPass] = useState(false)
 
@@ -83,7 +83,7 @@ const Login = () => {
                         </button>
 
                         {/* github button */}
-                        <button className="bg-slate-100 rounded-xl px-8 py-2">
+                        <button onClick={()=>githubSignIn()} className="bg-slate-100 rounded-xl px-8 py-2">
                             <FaGithub className="text-2xl"></FaGithub>
                         </button>
                     </div>
