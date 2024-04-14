@@ -54,8 +54,8 @@ const Login = () => {
 
     return (
         <div className="hero min-h-screen bg-base-200">
-            <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className="text-center lg:text-left">
+            <div className="hero-content flex-col">
+                <div className="text-center">
                     <h1 className="text-5xl font-bold">Login now!</h1>
                     <p className="py-6 text-gray-600">Streamlined login for efficient access. Secure authentication ensures data safety. User-friendly interface enhances navigation. Instant access to resources.</p>
                 </div>

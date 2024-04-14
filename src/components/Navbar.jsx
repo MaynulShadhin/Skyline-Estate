@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "./Firebase Provider/FirebaseProvider";
 
 const Navbar = () => {
+
+    const { logout, user } = useContext(AuthContext)
 
     const navLinks = <>
         <li><NavLink to="/" className={({ isActive }) => isActive ? 'border-b-2 border-lime-500 text-xl px-4 py-2 text-lime-500 hover:bg-lime-500 hover:text-white' : 'text-xl px-4 py-2 hover:bg-lime-500 hover:text-white'}>Home</NavLink></li>
@@ -27,7 +31,18 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to="/login"><button className="btn px-8 bg-lime-500 outline-none border-none text-white hover:bg-lime-600">Login</button></Link>
+                {
+                    user ? <div className="flex items-center gap-2">
+                        <div className="w-11">
+                            <img title={user.displayName
+                            } className="w-full rounded-full" src={user.photoURL} alt=""/>
+                        </div>
+                        <div>
+                            <button onClick={logout} className="btn btn-error">Logout</button>
+                        </div>
+                    </div> :
+                        <Link to="/login"><button className="btn px-8 bg-lime-500 outline-none border-none text-white hover:bg-lime-600">Login</button></Link>
+                }
             </div>
         </div>
     );
