@@ -3,15 +3,15 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import slider1 from '../assets/slider1.jpg';
-import slider2 from '../assets/slider2.jpg'; 
-import slider3 from '../assets/slider3.jpg'; 
+import slider2 from '../assets/slider2.jpg';
+import slider3 from '../assets/slider3.jpg';
 const Banner = () => {
     return (
         <div>
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-                <SwiperSlide><img className='w-screen md:h-[800px] object-cover' src={slider1} alt="" /></SwiperSlide>
                 <SwiperSlide><img className='w-screen md:h-[800px] object-cover' src={slider2} alt="" /></SwiperSlide>
                 <SwiperSlide><img className='w-screen md:h-[800px] object-cover' src={slider3} alt="" /></SwiperSlide>
+                <SwiperSlide><img className='w-screen md:h-[800px] object-cover' src={slider1} alt="" /></SwiperSlide>
             </Swiper>
             <div className='absolute z-10 md:top-52 md:left-10 hidden md:block'>
                 <h2 className='text-5xl font-bold mb-4'>Best <span className='font-bold text-lime-500'>Seller</span> In City</h2>

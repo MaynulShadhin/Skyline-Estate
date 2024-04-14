@@ -13,6 +13,7 @@ import Register from './pages/Register';
 import UserProfile from './pages/UserProfile';
 import UpdateProfile from './pages/UpdateProfile';
 import FirebaseProvider from './components/Firebase Provider/FirebaseProvider';
+import PrivateRoute from './Route/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,9 @@ const router = createBrowserRouter([
       },
       {
         path: "/cardDetail/:id",
-        element: <CardDetail></CardDetail>,
+        element: <PrivateRoute>
+          <CardDetail></CardDetail>
+        </PrivateRoute>,
         loader: () => fetch('../public.json')
       },
       {

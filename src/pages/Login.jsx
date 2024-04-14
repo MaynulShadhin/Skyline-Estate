@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../components/Firebase Provider/FirebaseProvider";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash, FaGithub } from "react-icons/fa";
@@ -7,9 +7,13 @@ import { ToastContainer, toast } from "react-toastify";
 import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
-    const { signInUser, googleSignIn, githubSignIn } = useContext(AuthContext)
     const [error, setError] = useState('')
     const [showPass, setShowPass] = useState(false)
+
+    const { signInUser, googleSignIn, githubSignIn } = useContext(AuthContext);
+
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const {
         register,
@@ -23,6 +27,9 @@ const Login = () => {
             .then(result => {
                 toast.success("Login Successful")
                 console.log(result.user)
+                setTimeout(() => {
+                    navigate(location?.state? location.state : '/') 
+                }, 2000); 
             })
             .catch(error => {
                 setError("Please check your email and password")
@@ -35,6 +42,9 @@ const Login = () => {
         googleSignIn()
             .then(() => {
                 toast.success("Google Login Successful")
+                setTimeout(() => {
+                    navigate(location?.state? location.state : '/') 
+                }, 2000);
             })
             .catch(error => {
                 console.log(error.message)
@@ -46,6 +56,9 @@ const Login = () => {
         githubSignIn()
             .then(() => {
                 toast.success("GitHub Login Successful")
+                setTimeout(() => {
+                    navigate(location?.state? location.state : '/') 
+                }, 2000);
             })
             .catch(error => {
                 console.log(error.message)
@@ -57,7 +70,7 @@ const Login = () => {
             <div className="hero-content flex-col">
                 <div className="text-center">
                     <h1 className="text-5xl font-bold">Login now!</h1>
-                    <p className="py-6 text-gray-600">Streamlined login for efficient access. Secure authentication ensures data safety. User-friendly interface enhances navigation. Instant access to resources.</p>
+                    <p className="py-6 text-gray-600">Streamlined login for efficient access. Secure authentication ensures data safety. User-friendly <br /> interface enhances navigation. Instant access to resources.</p>
                 </div>
                 <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">

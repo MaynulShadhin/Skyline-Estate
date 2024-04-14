@@ -33,9 +33,9 @@ const Navbar = () => {
             <div className="navbar-end">
                 {
                     user ? <div className="flex items-center gap-2">
-                        <div className="w-11">
-                            <img title={user.displayName
-                            } className="w-full rounded-full" src={user.photoURL} alt=""/>
+                        <div className="w-11 h-11">
+                            <img title={user?.displayName
+                            } className="w-full rounded-full h-full" src={user?.photoURL || "https://i.ibb.co/Wyry2pC/user.png"} alt=""/>
                         </div>
                         <div>
                             <button onClick={logout} className="btn btn-error">Logout</button>
