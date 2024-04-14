@@ -3,9 +3,9 @@ import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
 
     const navLinks = <>
-        <li><NavLink to="/" className={({ isActive }) => isActive ? 'border-b-2 border-lime-500 text-xl px-4 py-2 text-lime-500 hover:bg-lime-500 hover:text-white hover:rounded-xl' : 'text-xl px-4 py-2 hover:bg-lime-500 hover:text-white hover:rounded-xl'}>Home</NavLink></li>
-        <li><NavLink to="/userProfile" className={({ isActive }) => isActive ? 'border-b-2 border-lime-500 text-xl px-4 py-2 text-lime-500 hover:bg-lime-500 hover:text-white hover:rounded-xl' : 'text-xl px-4 py-2 hover:bg-lime-500 hover:text-white hover:rounded-xl'}>User Profile</NavLink></li>
-        <li><NavLink to="/updateProfile" className={({ isActive }) => isActive ? 'border-b-2 border-lime-500 text-xl px-4 py-2 text-lime-500 hover:bg-lime-500 hover:text-white hover:rounded-xl' : 'text-xl px-4 py-2 hover:bg-lime-500 hover:text-white hover:rounded-xl'}>Update Profile</NavLink></li>
+        <li><NavLink to="/" className={({ isActive }) => isActive ? 'border-b-2 border-lime-500 text-xl px-4 py-2 text-lime-500 hover:bg-lime-500 hover:text-white' : 'text-xl px-4 py-2 hover:bg-lime-500 hover:text-white'}>Home</NavLink></li>
+        <li><NavLink to="/userProfile" className={({ isActive }) => isActive ? 'border-b-2 border-lime-500 text-xl px-4 py-2 text-lime-500 hover:bg-lime-500 hover:text-white ' : 'text-xl px-4 py-2 hover:bg-lime-500 hover:text-white'}>User Profile</NavLink></li>
+        <li><NavLink to="/updateProfile" className={({ isActive }) => isActive ? 'border-b-2 border-lime-500 text-xl px-4 py-2 text-lime-500 hover:bg-lime-500 hover:text-white' : 'text-xl px-4 py-2 hover:bg-lime-500 hover:text-white'}>Update Profile</NavLink></li>
     </>
 
     return (
@@ -22,7 +22,7 @@ const Navbar = () => {
                 <h2 className="text-2xl font-bold">Skyline Estate</h2>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal px-1 space-x-4">
                     {navLinks}
                 </ul>
             </div>

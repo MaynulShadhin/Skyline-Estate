@@ -12,6 +12,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import UserProfile from './pages/UserProfile';
 import UpdateProfile from './pages/UpdateProfile';
+import FirebaseProvider from './components/Firebase Provider/FirebaseProvider';
 
 const router = createBrowserRouter([
   {
@@ -19,25 +20,25 @@ const router = createBrowserRouter([
     element: <Root></Root>,
     children: [
       {
-        path:"/",
+        path: "/",
         element: <Home></Home>,
-        loader: ()=> fetch('../public.json')
+        loader: () => fetch('../public.json')
       },
       {
-        path:"/cardDetail/:id",
+        path: "/cardDetail/:id",
         element: <CardDetail></CardDetail>,
-        loader: ()=>fetch('../public.json')
+        loader: () => fetch('../public.json')
       },
       {
-        path:"/login",
+        path: "/login",
         element: <Login></Login>
       },
       {
-        path:"/register",
+        path: "/register",
         element: <Register></Register>
       },
       {
-        path:"/userProfile",
+        path: "/userProfile",
         element: <UserProfile></UserProfile>
       },
       {
@@ -50,7 +51,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router ={router}>
-    </RouterProvider>
+    <FirebaseProvider>
+      <RouterProvider router={router}>
+      </RouterProvider>
+    </FirebaseProvider>
   </React.StrictMode>,
 )
