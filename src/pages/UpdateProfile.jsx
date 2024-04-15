@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../components/Firebase Provider/FirebaseProvider";
 import { ToastContainer, toast } from "react-toastify";
+import { Helmet } from "react-helmet";
 
 
 const UpdateProfile = () => {
@@ -24,6 +25,10 @@ const UpdateProfile = () => {
     const { displayName, email, photoURL } = user
     return (
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Update Profile-Skyline Estate</title>
+            </Helmet>
             <div className="hero min-h-screen bg-base-200 flex-1">
                 <div className="hero-content flex-col">
                     <div className="text-center">

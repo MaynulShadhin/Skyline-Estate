@@ -1,8 +1,18 @@
-# React + Vite
+#Skyline Estate
+Live Site : (https://skyline-estate-assignment-9.web.app)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Features and Characteristics of my Website:
 
-Currently, two official plugins are available:
+* User-Friendly Interface
+* Comprehensive Property Listings
+* Details of Property you need to know
+* Expert Insights and Resources
+* Login and Registration facility
+* Interactive Communication Channels
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+### npm packages which I have used :
+
+* AOS Package
+* React Hook Form
+* Swiper Slider
