@@ -8,8 +8,10 @@ const Navbar = () => {
 
     const navLinks = <>
         <li><NavLink to="/" className={({ isActive }) => isActive ? 'border-b-2 border-lime-500 text-xl px-4 py-2 text-lime-500 hover:bg-lime-500 hover:text-white' : 'text-xl px-4 py-2 hover:bg-lime-500 hover:text-white'}>Home</NavLink></li>
-        <li><NavLink to="/userProfile" className={({ isActive }) => isActive ? 'border-b-2 border-lime-500 text-xl px-4 py-2 text-lime-500 hover:bg-lime-500 hover:text-white ' : 'text-xl px-4 py-2 hover:bg-lime-500 hover:text-white'}>User Profile</NavLink></li>
-        <li><NavLink to="/updateProfile" className={({ isActive }) => isActive ? 'border-b-2 border-lime-500 text-xl px-4 py-2 text-lime-500 hover:bg-lime-500 hover:text-white' : 'text-xl px-4 py-2 hover:bg-lime-500 hover:text-white'}>Update Profile</NavLink></li>
+        <li><NavLink to="/service" className={({ isActive }) => isActive ? 'border-b-2 border-lime-500 text-xl px-4 py-2 text-lime-500 hover:bg-lime-500 hover:text-white ' : 'text-xl px-4 py-2 hover:bg-lime-500 hover:text-white'}>Our Services</NavLink></li>
+        {
+            user && <li><NavLink to="/updateProfile" className={({ isActive }) => isActive ? 'border-b-2 border-lime-500 text-xl px-4 py-2 text-lime-500 hover:bg-lime-500 hover:text-white' : 'text-xl px-4 py-2 hover:bg-lime-500 hover:text-white'}>Update Profile</NavLink></li>
+        }
     </>
 
     return (
@@ -35,7 +37,7 @@ const Navbar = () => {
                     user ? <div className="flex items-center gap-2">
                         <div className="w-11 h-11">
                             <img title={user?.displayName
-                            } className="w-full rounded-full h-full" src={user?.photoURL || "https://i.ibb.co/Wyry2pC/user.png"} alt=""/>
+                            } className="w-full rounded-full h-full" src={user?.photoURL || "https://i.ibb.co/Wyry2pC/user.png"} alt="" />
                         </div>
                         <div>
                             <button onClick={logout} className="btn btn-error">Logout</button>

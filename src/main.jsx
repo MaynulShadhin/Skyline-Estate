@@ -10,10 +10,10 @@ import Home from './pages/Home';
 import CardDetail from './pages/CardDetail';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import UserProfile from './pages/UserProfile';
 import UpdateProfile from './pages/UpdateProfile';
 import FirebaseProvider from './components/Firebase Provider/FirebaseProvider';
 import PrivateRoute from './Route/PrivateRoute';
+import OurService from './pages/OurService';
 
 const router = createBrowserRouter([
   {
@@ -41,12 +41,12 @@ const router = createBrowserRouter([
         element: <Register></Register>
       },
       {
-        path: "/userProfile",
-        element: <UserProfile></UserProfile>
+        path: "/service",
+        element: <PrivateRoute><OurService></OurService></PrivateRoute>
       },
       {
         path: "/updateProfile",
-        element: <UpdateProfile></UpdateProfile>
+        element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
       }
     ]
   },

@@ -11,7 +11,7 @@ const Register = () => {
     const [showPass, setShowPass] = useState(false)
 
 
-    const { createUser,updateUserProfile } = useContext(AuthContext);
+    const { createUser,updateUserProfile,setReload } = useContext(AuthContext);
 
     const {
         register,
@@ -52,6 +52,7 @@ const Register = () => {
                     setTimeout(() => {
                         navigate(from);
                     }, 2000);
+                    setReload(true)
                 })
                 
             })

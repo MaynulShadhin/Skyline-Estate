@@ -11,8 +11,9 @@ const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider()
 
 const FirebaseProvider = ({ children }) => {
-    const [user, setUser] = useState(null)
-    const [loading,setLoading] = useState(true)
+    const [user, setUser] = useState(null);
+    const [loading,setLoading] = useState(true);
+    const [reload,setReload] = useState(false)
 
     //creating User 
     const createUser = (email, password) => {
@@ -62,7 +63,7 @@ const FirebaseProvider = ({ children }) => {
         return () => {
             unsubscribe();
         }
-    }, []);
+    }, [reload]);
 
     const values = {
         user,
@@ -72,6 +73,7 @@ const FirebaseProvider = ({ children }) => {
         googleSignIn,
         githubSignIn,
         logout,
+        setReload,
         updateUserProfile
     }
     return (
