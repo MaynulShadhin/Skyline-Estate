@@ -14,11 +14,13 @@ import UpdateProfile from './pages/UpdateProfile';
 import FirebaseProvider from './components/Firebase Provider/FirebaseProvider';
 import PrivateRoute from './Route/PrivateRoute';
 import OurService from './pages/OurService';
+import ErrorPage from './pages/Error page/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",

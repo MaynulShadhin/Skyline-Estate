@@ -50,7 +50,7 @@ const UpdateProfile = () => {
                                     <span className="label-text">Email</span>
                                 </label>
                                 <input type="text"
-                                    placeholder="Name"
+                                    placeholder="Email"
                                     value={email}
                                     className="input input-bordered" />
                             </div>
